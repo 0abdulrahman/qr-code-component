@@ -12,15 +12,14 @@ a {
   text-decoration: none;
 }
 
-body {
+main {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
-.container {
+main .container {
   position: relative;
   height: 800px;
   background-color: #d6e2f0;
@@ -30,41 +29,41 @@ body {
   align-items: center;
 }
 @media only screen and (max-width: 600px) {
-  .container {
+  main .container {
     padding: 0 20px;
   }
 }
 @media only screen and (max-width: 1249px) {
-  .container {
+  main .container {
     width: 100%;
     height: 100%;
   }
 }
 @media only screen and (min-width: 1250px) and (max-width: 1499px) {
-  .container {
+  main .container {
     width: 1200px;
   }
 }
 @media only screen and (min-width: 1500px) {
-  .container {
+  main .container {
     width: 1400px;
   }
 }
-.container article {
+main .container article {
   background-color: #fff;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 350px;
+  width: 300px;
   padding: 15px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
-.container article .qr-code {
+main .container article figure {
   overflow: hidden;
 }
-.container article .qr-code img {
+main .container article figure img {
   width: 100%;
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -72,31 +71,29 @@ body {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
-.container article .text {
+main .container article figcaption {
   padding: 10px;
   text-align: center;
   margin-top: 20px;
   font-size: 15px;
-  color: #1f3251;
 }
-.container article .text p {
+main .container article figcaption span {
+  color: #1f3251;
+  font-weight: bold;
+  font-size: 19px;
+}
+main .container article figcaption p {
   margin-top: 20px;
   margin-bottom: 20px;
   color: gray;
+  font-size: 14px;
 }
-@media only screen and (max-width: 600px) {
-  .container article .text {
-    font-size: 14px;
-  }
-}
-
-.attribution {
+main .container aside {
   font-size: 11px;
   text-align: center;
   position: absolute;
   bottom: 10px;
 }
-
-.attribution a {
+main .container aside a {
   color: #3e52a3;
 }/*# sourceMappingURL=main.css.map */

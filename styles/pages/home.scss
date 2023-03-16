@@ -2,83 +2,86 @@
 @use '../variables/media' as *;
 @use "../variables/font" as *;
 
-body {
+main {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.container {
-  position: relative;
-  height: 800px;
-  @include media('x-small') {
-    padding: 0 20px;
-  }
-  @include media('medium') {
-    width: 100%;
-    height: 100%;
-  }
-  @include media('large') {
-    width: 1200px;
-  }
-  @include media('x-large') {
-    width: 1400px;
-  }
-  background-color: $light_gray;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  article {
-    background-color: $white;
-    border-radius: 20px;
+  .container {
+    position: relative;
+    height: 800px;
+    @include media('x-small') {
+      padding: 0 20px;
+    }
+    @include media('medium') {
+      width: 100%;
+      height: 100%;
+    }
+    @include media('large') {
+      width: 1200px;
+    }
+    @include media('x-large') {
+      width: 1400px;
+    }
+    background-color: $light_gray;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    width: 350px;
-    padding: 15px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);;
-    .qr-code {
-      overflow: hidden;
-      img {
-        width: 100%;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
+    article {
+      background-color: $white;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 300px;
+      padding: 15px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);;
+      figure {
+        overflow: hidden;
+        img {
+          width: 100%;
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+        }
+      }
+      figcaption {
+        padding: 10px;
+        text-align: center;
+        margin-top: 20px;
+        font: {
+          size: $font_size;
+        }
+        span {
+          color: $dark_blue;
+          font-weight: bold;
+          font-size: $font_size + 4;
+        }
+        p {
+          margin: {
+            top: 20px;
+            bottom: 20px;
+          };
+          color: gray;
+          font-size: $font_size - 1;
+        }
       }
     }
-    .text {
-      padding: 10px;
+    aside {
+      font-size: 11px;
       text-align: center;
-      margin-top: 20px;
-      font: {
-        size: $font_size;
-      }
-      color: $dark_blue;
-      p {
-        margin: {
-          top: 20px;
-          bottom: 20px;
-        };
-        color: gray;
-      }
-      @include media('x-small') {
-        font-size: calc($font_size - 1px)
-      }
+      position: absolute;
+      bottom: 10px;
+    }
+    aside a {
+      color: $off_blue;
     }
   }
 }
 
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  position: absolute;
-  bottom: 10px;
-}
-.attribution a {
-  color: $off_blue;
-}
+
