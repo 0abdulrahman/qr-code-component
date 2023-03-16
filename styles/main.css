@@ -88,12 +88,15 @@ main .container article figcaption p {
   color: gray;
   font-size: 14px;
 }
-main .container aside {
+
+footer {
   font-size: 11px;
   text-align: center;
   position: absolute;
   bottom: 10px;
+  width: 100%;
 }
-main .container aside a {
+
+footer a {
   color: #3e52a3;
 }/*# sourceMappingURL=main.css.map */
